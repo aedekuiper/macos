@@ -1,0 +1,414 @@
+Item: macOS 15 - Intune Benchmark - System Policy Control
+Id: c9b97b50-92d3-4e30-b6c8-31228ba6fb16
+Has: 
+    com.apple.systempolicy.control:
+        EnableAssessment=True               
+        AllowIdentifiedDevelopers=True      
+        DisableOverride=True
+        EnableXProtectMalwareUPload=False
+Replaces:
+    MacOS - Restrictions - CISL2: SystemPolicy Control
+    MacOS - Gatekeeper
+
+
+Item: macOS 15 - Intune Benchmark - System Configuration
+Id: 0d6d516c-ab2c-46e2-a1d4-fa59dbd26b9b
+Has:
+    com.apple.mcx:
+        DestroyFVKeyOnStandby=False
+    com.apple.system-extension-policy:
+        AllowUserOverrides=True
+    com.apple.EnergySaver.desktop.ACPower: 
+        Display Sleep Timer = 10
+        System Sleep Timer = 15
+        Wake On Lan = 0
+        Wake on Modem Ring = 0
+    com.apple.EnergySaver.portable.ACPower:
+        Display Sleep Timer = 10
+        System Sleep Timer = 15
+        Wake On Lan = 0
+        Wake on Modem Ring = 0
+    com.apple.EnergySaver.desktop.BatteryPower:
+        Display Sleep Timer = 10
+        System Sleep Timer = 15
+        Wake On Lan = 0
+        Wake on Modem Ring = 0
+    com.apple.screensaver:
+        AskForPassword=True
+        AskForPasswordDelay=0
+        moduleName=1
+Replaces:
+    MacOS - Restrictions - CISL2
+
+
+Item: macOS 15 - Intune Benchmark - Software Update
+Id: d0653cfe-b6d4-4b3e-8ef9-6bd80664d8e3
+Has:
+    com.apple.SoftwareUpdate:
+        AutomaticCheckEnabled=True
+        AutomaticDownload=True
+        AutomaticallyInstallAppUpdates=True
+        AutomaticallyInstallMacOSUpdates=True
+        CriticalUpdateInstalls=True
+Replaces:
+    MacOS - Restrictions - CISL2: Software Update
+      Exception:
+        ConfigDataInstall=True
+
+
+Item: macOS 15 - Intune Benchmark - Security
+Id: 08317864-198e-4703-9a46-8473aedbd15d
+Has:
+    com.apple.mobiledevice.passwordpolicy:
+        maxPINAgeInDays=180
+        maxGracePeriod=0
+        maxInactivity=15
+        minComplexChars=1
+        pinHistory=12
+        forcePIN=True
+        maxFailedAttempts=10
+        allowSimple=False
+        minutesUntilFailedLoginReset=15
+        requireAlphanumeric=True
+        minLength=8
+Replaces:
+    MacOS - Restrictions & Password
+
+Item: macOS 15 - Intune Benchmark - Restrictions
+Id: 76c28314-133d-4400-a6da-ec08a025fa4b
+Has:
+    com.apple.applicationaccess:
+        allowCloudMail=True
+        allowCloudDesktopAndDocuments=False
+        allowiTunesFileSharing=False
+        allowBluetoothSharingModification=False
+        allowPasswordSharing=False
+        allowCloudPhotoLibrary=True
+        enforcedSoftwareUpdateDelay=20
+        allowActivityContinuation=True
+        allowCloudCalendar=True
+        allowFileSharingModification=False
+        allowEraseContentAndSettings=True
+        allowAirPlayIncomingRequests=False
+        allowMediaSharingModification=False
+        allowCloudDocumentSync=False
+        allowCloudBookmarks=True
+        allowCloudFreeform=True
+        allowAssistant=False
+        allowGameCenter=False
+        allowContentCaching=False
+        allowFindMyFriends=False
+        allowAirDrop=True
+        allowARDRemoteManagementModification=False
+        allowStartupDiskModification=False
+        allowUIConfigurationProfileInstallation=False
+        allowDeviceNameModification=False
+        allowInternetSharingModification=False
+        allowPasswordAutoFill=True
+        allowLocalUserCreation=False
+        allowApplePersonalizedAdvertising=False
+        allowPrinterSharingModification=False
+        allowDiagnosticSubmission=False
+        allowCloudNotes=True
+        allowPasswordProximityRequests=False
+        forceOnDeviceOnlyDictation=True
+        allowiPhoneMirroring=False
+        allowUniversalControl=False
+        allowCloudAddressBook=True
+        allowCloudKeychainSync=True
+Replaces:
+    MacOS - Restrictions - CISL2
+      Exception:
+        allowRemoteAppleEventsModification=False
+        allowRemoteScreenObservation=False
+    MacOS 15 - Restrictions - CISL2: iPhone Mirroring
+    MacOS 15 - Restrictions - CISL2: Application Access
+      Exception:
+        allowMediaSharing=False
+
+Item: macOS 15 - Intune Benchmark - Networking
+Id: 7b0924dd-af51-48f0-b999-6e44bf1093f4
+Has:
+    com.apple.AssetCache.managed:
+        AutoActivation=False
+    com.apple.security.firewall:
+        EnableFirewall=True
+        EnableStealthMode=True
+Replaces:
+    MacOS - Firewall Configuration
+
+Item: macOS 15 - Intune Benchmark - Managed Setting
+Id: af50a1e0-1581-4fcb-9e14-8b7a638b9d71
+Has:
+    SettingsCommand.Command.Settings.MDMOptions.MDMOptions:
+        ActivationLockAllowedWhileSupervised=True
+Replaces:
+
+Item: macOS 15 - Intune Benchmark - Login
+Id: aca52afb-baf5-4a50-950f-0b78c426a855
+Has:
+    com.apple.loginwindow:
+        SHOWFULLNAME=True
+    loginwindow:
+        DisableLoginItemsSuppression=True
+Replaces:
+    MacOS - Restrictions - CISL2: Login Window
+    MacOS - Restrictions - CISL2
+
+
+Item: macOS 15 - Intune Benchmark - Full Disk Encryption
+Id: 5610c2ab-c53f-4fb6-9d3c-2d8411d80701 
+Has:
+    com.apple.MCX.FileVault2:
+        UserEntersMissingInfo=True
+        DeferForceAtUserLoginMaxBypassAttempts=0
+        Enabled=True
+        ShowRecoveryKey=False
+        ForceEnableInSetupAssistant=True
+    com.apple.MCX:
+        dontAllowFDEDisable=True
+Replaces:
+    MacOS - Force Filevault during Setup Assistant
+    MacOS - Disable turn Off Filevault
+    MacOS 15 - Restrictions - CISL2: MCX
+
+
+Item: macOS 15 - Intune Benchmark - App Store
+Id: e4df0b25-80d4-4ce1-88c0-abb595eb4889
+Has:
+    restrict-store-softwareupdate-only=False
+Replaces:
+
+Item: macOS 15 - Intune Benchmark - Accounts
+Id: a04b3cce-c1b2-473e-8865-31afe7ed6c13
+Has:
+    com.apple.MCX:
+        EnableGuestAccount=False
+        DisableGuestAccount=True
+Replaces:
+    MacOS - Restrictions - CISL2
+    MacOS 15 - Restrictions - CISL2: MCX
+
+
+# OLD ITEMS BELOW
+
+Item: MacOS - Restrictions - CISL2: Software Update
+Has: 
+    com.apple.SoftwareUpdate:
+        AutomaticCheckEnabled=True
+        AutomaticDownload=True
+        AutomaticallyInstallAppUpdates=True
+        AutomaticallyInstallMacOSUpdates=True
+        ConfigDataInstall=True
+        CriticalUpdateInstalls=True
+
+Item: MacOS 15 - Restrictions - CISL2: Siri #Deprecated
+Has:
+    com.apple.Siri:
+        VoiceTriggerUserEnabled=False
+
+Item: MacOS 15 - Restrictions - CISL2: MCX
+Has:
+    com.apple.MCX:
+        DisableGuestAccount=True
+        EnableGuestAccount=False
+        dontAllowFDEDisable=True
+        forceInternetSharingOff=True
+        timeServer=time.apple.com
+
+Item: MacOS 15 - Restrictions - CISL2: iPhone Mirroring
+Has:
+    com.apple.applicationaccess:
+        allowiPhoneMirroring=False
+
+Item: MacOS 15 - Restrictions - CISL2: Assistant Support  #Deprecated
+Has:
+    com.apple.assistant.support:
+        Siri Data Sharing Opt-In Status=2
+
+Item: MacOS 15 - Restrictions - CISL2: Application Access
+Has:
+    om.apple.applicationaccess:
+        allowAirPlayIncomingRequests=False
+        allowApplePersonalizedAdvertising=False
+        allowCloudDesktopAndDocuments=False
+        allowContentCaching=False
+        allowDiagnosticSubmission=False
+        allowMediaSharing=False
+        allowMediaSharingModification=False
+        allowiPhoneMirroring=False
+        enforcedSoftwareUpdateDelay=30
+        forceOnDeviceOnlyDictation=True
+
+Item: MacOS 15 - Restrictions - CISL2: Accessibility  #Deprecated
+Has:
+    com.apple.Accessibility:
+        AXSAudioDonationSiriImprovementEnabled=False
+
+Item: MacOS - Restrictions - CISL2: Terminal  #Deprecated
+Has:
+    com.apple.Terminal:
+        SecureKeyboardEntry=True
+
+Item: MacOS - Restrictions - CISL2: SystemPolicy Control
+Has:
+    com.apple.systempolicy.control:
+        EnableAssessment=True
+
+Item: MacOS - Restrictions - CISL2: Sharing Preferences #Deprecated
+Has:
+    com.apple.preferences.sharing.SharingPrefsExtension:
+        homeSharingUIStatus=0
+        legacySharingUIStatus=0
+        mediaSharingUIStatus=0
+
+Item: MacOS - Restrictions - CISL2: Safari #Deprecated
+Has:
+    com.apple.Safari:
+        ShowFullURLInSmartSearchField=True
+        ShowOverlayStatusBar=True
+        WarnAboutFraudulentWebsites=True
+        WebKitPreferences.privateClickMeasurementEnabled=True
+        WebKitPreferences.storageBlockingPolicy=1
+        WebKitStorageBlockingPolicy=1
+        safariAllowPopups=False
+
+Item: MacOS - Restrictions - CISL2: Managed Client Preferences #Deprecated
+Has:
+    com.apple.timed:
+        TMAutomaticTimeOnlyEnabled=True
+
+Item: MacOS - Restrictions - CISL2: Login Window
+Has:
+    com.apple.loginwindow:
+        RetriesUntilHint=0 
+        SHOWFULLNAME=True
+        com.apple.login.mcx.DisableAutoLoginClient=True
+
+Item: MacOS - Restrictions - CISL2: DNS Responder
+Has:
+    com.apple.mDNSResponder:
+        NoMulticastAdvertisements=True
+
+Item: MacOS - Restrictions - CISL2: Diagnostics
+Has:
+    com.apple.SubmitDiagInfo:
+        AutoSubmit=False
+
+Item: MacOS - Restrictions - CISL2: Control Center
+Has:
+    com.apple.controlcenter:
+        Bluetooth=18
+        WiFi=18
+
+Item: MacOS - Restrictions - CISL2
+Has:
+    com.apple.MCX:
+        DisableGuestAccount=True 
+        EnableGuestAccount=False
+    com.apple.loginwindow:
+        SHOWFULLNAME=False
+    com.apple.applicationaccess:
+        allowARDRemoteManagementModification=False
+        allowAirPlayIncomingRequests=False
+        allowApplePersonalizedAdvertising=False
+        allowBluetoothSharingModification=False
+        allowCloudDesktopAndDocuments=False
+        allowCloudKeychainSync=True
+        allowContentCaching=False
+        allowDeviceNameModification=False
+        allowDiagnosticsubmission=False
+        allowFileSharingModification=False
+        allowPasswordSharing=False
+        allowPrinterSharingModification=False
+        allowRemoteAppleEventsModification=False
+        allowRemoteScreenObservation=False
+        allowiTunesFileSharing=False
+        forceOnDeviceOnlyDictation=True
+        allowCloudKeychainSync=True
+    com.apple.SoftwareUpdate:
+        AutomaticallyInstallAppUpdates=True
+        AutomaticallyInstallMacOSUpdates=True
+        AutomaticCheckEnabled=True
+        CriticalUpdateInstalls=True
+        AutomaticDownload=True
+    com.apple.EnergySaver.desktop.ACPower: 
+        Wake On Lan = 0
+    com.apple.EnergySaver.portable.ACPower:
+        Wake On Lan = 0
+    com.apple.EnergySaver.desktop.BatteryPower:
+        Wake On Lan = 0
+    com.apple.screensaver:
+        AskForPassword=True
+        AskForPasswordDelay=0
+        moduleName=Amsterdam UMC
+    com.apple.mcxMenuExtras:   # Deprecated
+        Bluetooth.menu=True
+        Airport.menu=True
+        Battery.menu=True
+    com.apple.screensaver.user:
+        idleTime=1200
+        moduleName=Amsterdam UMC
+
+Item: MacOS - Restrictions & Password
+Has:
+    com.apple.applicationaccess:
+        allowCloudDesktopAndDocuments=False
+        allowCloudDocumentSync=False
+        allowContentCaching=False
+    com.apple.mobiledevice.passwordpolicy:
+        allowSimple=False
+        forcePIN=True
+        maxFailedAttempts=10
+        maxGracePeriod=0
+        maxInactivity=20
+        maxPINAgeInDays=180
+        minComplexChars=1
+        minLength=8
+        minutesUntilFailedLoginReset=15
+        pinHistory=15
+        requireAlphanumeric=True
+    com.apple.TCC.configuration-profile-policy:
+        com.microsoft.OneDrive
+        com.microsoft.intuneMDMAgent
+        com.microsoft.remotehelp
+
+Item: MacOS - Gatekeeper
+Has:
+    com.apple.systempolicy.control:
+        AllowIdentifiedDevelopers=True
+        DisableOverride=True
+
+Item: MacOS - Force Filevault during Setup Assistant
+Has:
+    com.apple.security.FDERecoveryKeyEscrow:
+        Location: Company Portal / Bedrijfs Portaal
+    com.apple.MCX.FileVault2:
+        DeferForceAtUserLoginMaxBypassAttempts=0
+        Enabled=True
+        ShowRecoveryKey=False
+        ForceEnableInSetupAssistant=True
+    com.apple.MCX:
+        dontAllowFDEDisable=True
+    <unknown>:
+        Recovery Key Rotation In Months=12
+
+Item: MacOS - Firewall Configuration
+Has:
+    com.apple.security.firewall:
+        EnableFirewall=True
+        EnableStealthMode=True
+
+Item: MacOS - Disable turn Off Filevault
+Has:
+    com.apple.MCX:
+        dontAllowFDEDisable=True
+
+Item: MacOS - Device Features
+Has:
+    com.apple.loginitems.managed:
+        Path=/Applications/OneDrive.app
+        Hide=1
+    com.apple.loginwindow:
+        LoginwindowText=This device is managed by Amsterdam UMC
+        
