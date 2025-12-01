@@ -52,8 +52,8 @@ Has:
         CriticalUpdateInstalls=True
 Replaces:
     MacOS - Restrictions - CISL2: Software Update
-      Exception:
-        ConfigDataInstall=True
+        Exception:
+            ConfigDataInstall=True
 
 
 Item: macOS 15 - Intune Benchmark - Security
@@ -118,13 +118,13 @@ Has:
         allowCloudKeychainSync=True
 Replaces:
     MacOS - Restrictions - CISL2
-      Exception:
-        allowRemoteAppleEventsModification=False
-        allowRemoteScreenObservation=False
+        Exception:
+            allowRemoteAppleEventsModification=False
+            allowRemoteScreenObservation=False
     MacOS 15 - Restrictions - CISL2: iPhone Mirroring
     MacOS 15 - Restrictions - CISL2: Application Access
-      Exception:
-        allowMediaSharing=False
+        Exception:
+            allowMediaSharing=False
 
 Item: macOS 15 - Intune Benchmark - Networking
 Id: 7b0924dd-af51-48f0-b999-6e44bf1093f4
