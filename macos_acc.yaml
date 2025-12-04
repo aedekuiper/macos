@@ -84,7 +84,7 @@ Has:
         allowBluetoothSharingModification=False
         allowPasswordSharing=False
         allowCloudPhotoLibrary=True
-        enforcedSoftwareUpdateDelay=20
+        enforcedSoftwareUpdateDelay=20 # Removed because it is deprecated by Apple
         allowActivityContinuation=True
         allowCloudCalendar=True
         allowFileSharingModification=False
@@ -202,7 +202,7 @@ Has:
         ConfigDataInstall=True
         CriticalUpdateInstalls=True
 
-Item: MacOS 15 - Restrictions - CISL2: Siri #Deprecated
+Item: MacOS 15 - Restrictions - CISL2: Siri #Not new new benchmark
 Has:
     com.apple.Siri:
         VoiceTriggerUserEnabled=False
@@ -221,7 +221,7 @@ Has:
     com.apple.applicationaccess:
         allowiPhoneMirroring=False
 
-Item: MacOS 15 - Restrictions - CISL2: Assistant Support  #Deprecated
+Item: MacOS 15 - Restrictions - CISL2: Assistant Support  #Not new new benchmark
 Has:
     com.apple.assistant.support:
         Siri Data Sharing Opt-In Status=2
@@ -237,15 +237,15 @@ Has:
         allowMediaSharing=False
         allowMediaSharingModification=False
         allowiPhoneMirroring=False
-        enforcedSoftwareUpdateDelay=30
+        enforcedSoftwareUpdateDelay=30 # Deprecated by Apple
         forceOnDeviceOnlyDictation=True
 
-Item: MacOS 15 - Restrictions - CISL2: Accessibility  #Deprecated
+Item: MacOS 15 - Restrictions - CISL2: Accessibility  #Not new new benchmark
 Has:
     com.apple.Accessibility:
         AXSAudioDonationSiriImprovementEnabled=False
 
-Item: MacOS - Restrictions - CISL2: Terminal  #Deprecated
+Item: MacOS - Restrictions - CISL2: Terminal  #Not new new benchmark
 Has:
     com.apple.Terminal:
         SecureKeyboardEntry=True
@@ -255,14 +255,14 @@ Has:
     com.apple.systempolicy.control:
         EnableAssessment=True
 
-Item: MacOS - Restrictions - CISL2: Sharing Preferences #Deprecated
+Item: MacOS - Restrictions - CISL2: Sharing Preferences #Not new new benchmark
 Has:
     com.apple.preferences.sharing.SharingPrefsExtension:
         homeSharingUIStatus=0
         legacySharingUIStatus=0
         mediaSharingUIStatus=0
 
-Item: MacOS - Restrictions - CISL2: Safari #Deprecated
+Item: MacOS - Restrictions - CISL2: Safari #Not new new benchmark
 Has:
     com.apple.Safari:
         ShowFullURLInSmartSearchField=True
@@ -273,7 +273,7 @@ Has:
         WebKitStorageBlockingPolicy=1
         safariAllowPopups=False
 
-Item: MacOS - Restrictions - CISL2: Managed Client Preferences #Deprecated
+Item: MacOS - Restrictions - CISL2: Managed Client Preferences #Not new new benchmark
 Has:
     com.apple.timed:
         TMAutomaticTimeOnlyEnabled=True
@@ -342,7 +342,7 @@ Has:
         AskForPassword=True
         AskForPasswordDelay=0
         moduleName=Amsterdam UMC
-    com.apple.mcxMenuExtras:   # Deprecated
+    com.apple.mcxMenuExtras:   #Not new new benchmark
         Bluetooth.menu=True
         Airport.menu=True
         Battery.menu=True
