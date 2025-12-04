@@ -394,6 +394,7 @@ Has:
         Recovery Key Rotation In Months=12
 
 Item: MacOS - Firewall Configuration
+Id: 15290e65-106a-465f-9ae3-4c72d82f04bb
 Has:
     com.apple.security.firewall:
         EnableFirewall=True
