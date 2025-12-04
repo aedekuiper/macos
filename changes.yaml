@@ -1,0 +1,52 @@
+Change 01: [approved]
+    macOS 15 - Intune Benchmark - System Policy Control
+Replaces: 
+    MacOS - Gatekeeper
+    MacOS - Restrictions - CISL2: SystemPolicy Control
+
+
+Change 02:
+    macOS 15 - Intune Benchmark - Accounts
+    macOS 15 - Intune Benchmark - Login
+    macOS 15 - Intune Benchmark - Restrictions
+    macOS 15 - Intune Benchmark - SoftwareUpdate
+    macOS 15 - Intune Benchmark - System Configuration
+Replaces:
+    MacOS - Restrictions - CISL2
+    MacOS 15 - Restrictions - CISL2: MCX
+    MacOS 15 - Restrictions - CISL2: iPhone Mirroring
+    MacOS 15 - Restrictions - CISL2: Application Access
+    MacOS - Restrictions - CISL2: Software Update
+    MacOS - Restrictions & Password
+
+
+Change 03: [approved]
+    macOS 15 - Intune Benchmark - Networking 
+Replaces:
+    MacOS - Firewall Configuration
+
+
+Change 04: 
+    macOS 15 - Intune Benchmark - Managed Setting
+Replaces:
+    n/a
+
+
+Change 05:
+    macOS 15 - Intune Benchmark - Full Disk Encryption
+Replaces:
+    MacOS - Force Filevault during Setup Assistant
+    MacOS - Disable turn Off Filevault
+    MacOS 15 - Restrictions - CISL2: MCX
+
+
+Change 06: [approved]
+    macOS 15 - Intune Benchmark - App Store
+Replaces:
+    n/a
+
+
+Change 07: 
+    macOS 15 - Intune Benchmark - Security
+Replaces:
+    MacOS - Restrictions & Password
